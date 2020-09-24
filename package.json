@@ -1,6 +1,6 @@
 {
   "name": "arangomigration",
-  "version": "1.0.0-development",
+  "version": "0.0.0-development",
   "description": "ArangoDB migration cli tool",
   "main": "src/index.js",
   "bin": {
