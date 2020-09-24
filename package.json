@@ -1,6 +1,6 @@
 {
   "name": "arangomigration",
-  "version": "0.0.0",
+  "version": "1.0.0-development",
   "description": "ArangoDB migration cli tool",
   "main": "src/index.js",
   "bin": {
@@ -8,11 +8,12 @@
   },
   "scripts": {
     "test": "npm test",
-    "test-run": "./src/cli/index.js apply"
+    "test-run": "./src/cli/index.js apply",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/loveindent/arangomigration.git"
+    "url": "https://github.com/loveindent/arangomigration.git"
   },
   "keywords": [
     "ArangoDB",
@@ -38,7 +39,8 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "husky": "^4.3.0",
-    "prettier": "2.1.2"
+    "prettier": "2.1.2",
+    "semantic-release": "^17.1.2"
   },
   "husky": {
     "hooks": {
