@@ -61,7 +61,7 @@ program
 
 program
   .command('status [directory]')
-  .description('TODO')
+  .description('Check local file and compare to previously applied migration')
   .option(...commonsOptions.url)
   .option(...commonsOptions.username)
   .option(...commonsOptions.password)
