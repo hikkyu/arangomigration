@@ -1,0 +1,33 @@
+database: db-test
+
+create:
+  collections:
+    - name: players
+
+  analyzers:
+    - name: norm_text
+      type: norm
+      properties:
+        locale: en.utf-8
+        accent: false
+        case: lower
+      features:
+        - frequency
+        - norm
+        - position
+
+  views:
+    - name: SearchDogs
+      properties:
+        links:
+          Dogs:
+            analyzers:
+              - norm_text
+              - text_fr
+            fields:
+              email: {}
+              lastname: {}
+              firstname: {}
+            includeAllFields: true
+            storeValues: none
+            trackListPositions: false

@@ -1,0 +1,10 @@
+{
+  "name": "migration",
+  "engines": {
+    "arangodb": "^3.6.0"
+  },
+  "scripts": {
+    "grant-user": "grant-user.js",
+    "create-user": "create-user.js"
+  }
+}

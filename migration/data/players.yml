@@ -1,0 +1,17 @@
+database: db-test
+collection: players
+data:
+  - _key: player-1
+    name: plop-player
+    test: try
+  - _key: player-2
+    name: plop-player
+    deep:
+      key1: value
+      key3: test
+    directArray:
+      - item1
+      - item2
+    arrayWithObject:
+      - name: true
+        anotherKey: yes

@@ -1,0 +1,40 @@
+{
+  "name": "arangomigration",
+  "version": "0.0.0",
+  "description": "ArangoDB migration cli tool",
+  "main": "src/index.js",
+  "bin": {
+    "arangomigration": "./src/cli/index.js"
+  },
+  "scripts": {
+    "test": "npm test",
+    "test-run": "./src/cli/index.js apply"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loveindent/arangomigration.git"
+  },
+  "keywords": [
+    "ArangoDB",
+    "cli",
+    "migration"
+  ],
+  "author": "Hikkyu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loveindent/arangomigration/issues"
+  },
+  "homepage": "https://github.com/loveindent/arangomigration#readme",
+  "dependencies": {
+    "arangojs": "^7.0.1",
+    "colors": "^1.4.0",
+    "commander": "^6.1.0",
+    "inquirer": "^7.3.3",
+    "js-yaml": "^3.14.0",
+    "jszip": "^3.5.0",
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "prettier": "2.1.2"
+  }
+}

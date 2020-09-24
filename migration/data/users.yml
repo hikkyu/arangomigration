@@ -1,0 +1,18 @@
+database: db-test
+collection: users
+data:
+  - _key: user-1
+    name: plop-user
+    test: try
+  - _key: user-2
+    firstname: plop-user
+    lastname: lastname
+    deep:
+      key1: value
+      key3: test
+    directArray:
+      - item1
+      - item2
+    arrayWithObject:
+      - name: true
+        anotherKey: yes

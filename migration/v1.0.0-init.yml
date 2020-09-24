@@ -1,0 +1,25 @@
+database: db-test
+
+create:
+  users:
+    - username: glandu
+      password: 123455555
+
+  collections:
+    - name: users
+      grant:
+        user: glandu
+        type: ro
+    - name: dogs
+
+  edgeCollections:
+    - name: userDogs
+
+  indexes:
+    - name: plop
+      collection: users
+      type: hash
+      unique: true
+      fields:
+        - firstname
+        - lastname
