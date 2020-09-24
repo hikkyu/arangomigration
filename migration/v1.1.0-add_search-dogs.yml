@@ -1,9 +1,6 @@
 database: db-test
 
 create:
-  collections:
-    - name: players
-
   analyzers:
     - name: norm_text
       type: norm
@@ -23,11 +20,9 @@ create:
           Dogs:
             analyzers:
               - norm_text
-              - text_fr
+              - text_en
             fields:
-              email: {}
-              lastname: {}
-              firstname: {}
+              name: {}
             includeAllFields: true
             storeValues: none
             trackListPositions: false

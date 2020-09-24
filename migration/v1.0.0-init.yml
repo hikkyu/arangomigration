@@ -18,7 +18,7 @@ create:
   indexes:
     - name: plop
       collection: users
-      type: hash
+      type: persistent
       unique: true
       fields:
         - firstname
