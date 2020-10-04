@@ -2,7 +2,7 @@ const fs = require('fs')
 const filter = require('lodash/filter')
 const JSZip = require('jszip')
 const getSystemDB = require('./getSystemDB')
-const getMigrationFilesList = require('./getMigrationFilesList')
+const getFoxxFiles = require('./getFoxxFiles')
 
 module.exports = async function installOrReplaceFoxxService(options) {
   const systemDB = getSystemDB(options)
@@ -11,7 +11,7 @@ module.exports = async function installOrReplaceFoxxService(options) {
 
   // Build in memory zip
   const zip = new JSZip()
-  const files = await getMigrationFilesList('./src/foxx-service')
+  const files = await getFoxxFiles()
 
   files.forEach((file) => {
     zip.file(file.fileName, fs.readFileSync(file.fullPath))
