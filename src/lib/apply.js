@@ -1,3 +1,4 @@
+const fs = require('fs')
 const installOrReplaceFoxxService = require('./helpers/installOrReplaceFoxxService')
 const getMigrations = require('./helpers/getMigrations')
 const getMigrationFilesList = require('./helpers/getMigrationFilesList')
@@ -17,7 +18,7 @@ module.exports = async function apply(options) {
     })
   }
 
-  if (options.insertData) {
+  if (options.insertData && fs.existsSync(options.directory + '/data')) {
     const dataFiles = await getMigrationFilesList(options.directory + '/data')
 
     for (const dataFile of dataFiles) {
