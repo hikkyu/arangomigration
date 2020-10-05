@@ -1,20 +1,15 @@
 module.exports = function createIndex(index, db) {
-  const { collection, type, unique, fields, name } = index
+  const { collection, ...restOfIndex } = index
 
   return db
     .collection(collection)
-    .ensureIndex({
-      name,
-      type,
-      unique,
-      fields,
-    })
+    .ensureIndex(restOfIndex)
     .then(() => {
-      console.info(`    ✅ Index ${name.cyan} created`)
+      console.info(`    ✅ Index ${index.name.cyan} created`)
     })
     .catch((error) => {
       if (error.code === 409) {
-        console.info(`    ✅ Collection ${name.cyan} already exist`)
+        console.info(`    ✅ Collection ${index.name.cyan} already exist`)
       } else {
         throw error
       }
